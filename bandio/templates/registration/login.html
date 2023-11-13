@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Login - BANDio{% endblock %}
+
+{% block content %}
+    <h1>Login to Your Account</h1>
+    <!-- Login form -->
+    <form method="post">
+        {% csrf_token %}  <!-- Cross-Site Request Forgery protection token -->
+        {{ form.as_p }}    <!-- Display form fields as paragraphs -->
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Link to registration page -->
+    <p>Don't have an account? <a href="{% url 'registration' %}">Register</a></p>
+</div>
+{% endblock %}

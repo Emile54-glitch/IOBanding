@@ -1,0 +1,27 @@
+{% extends "base.html" %}  {# Extending the "base.html" template to inherit its structure. #}
+
+{% block title %}Home - BANDio{% endblock %}  {# Setting the page title within the "title" block. #}
+
+{% block content %}
+    <h1>Welcome to BANDio</h1>  {# Displaying a top-level heading welcoming users to BANDio. #}
+    <p>Discover amazing bands and their music.</p>  {# Providing a brief introduction to the website's purpose. #}
+
+    <h2>Featured Bands</h2>  {# Introducing a subsection for featured bands. #}
+    <ul>
+        <li>
+            <h3>Depsies</h3>  {# Displaying the name of the first featured band. #}
+            <p>We strive for a bit of depression.</p>  {# Providing a description of the first band. #}
+        </li>
+        <li>
+            <h3>liFes</h3>  {# Displaying the name of the second featured band. #}
+            <p>What is life without music?</p>  {# Providing a description of the second band. #}
+        </li>
+        <li>
+            <h3>TiAiC</h3>  {# Displaying the name of the third featured band. #}
+            <p>Taking it as it comes.</p>  {# Providing a description of the third band. #}
+        </li>
+    </ul>
+    <p>Want to log in? <a href="{% url 'login' %}">Login</a></p>  {# Providing a link to the login page. #}
+    <p>Already logged in? <a href="{% url 'logout' %}">Logout</a></p>  {# Providing a link to the logout page. #}
+    
+{% endblock %}  {# Closing the content block. #}

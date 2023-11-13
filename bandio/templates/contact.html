@@ -1,0 +1,26 @@
+{% extends "base.html" %}  {# Extend the base.html template. #}
+
+{% block title %}Contact - BANDio{% endblock %}  {# Set the title of the page. #}
+
+{% block content %}
+    <h1>Contact Us</h1>  {# Display the main heading. #}
+    <p>Have a question or suggestion? Feel free to reach out to us.</p>  {# Provide a brief introductory text. #}
+
+    <h2>Contact Information</h2>  {# Display a heading for contact information. #}
+    <p>Email: contact@bandio.com</p>  {# Show the contact email. #}
+    <p>Phone: +1 (123) 456-7890</p>  {# Display the contact phone number. #}
+
+    <h2>Contact Form</h2>  {# Display a heading for the contact form. #}
+    <form>
+        <label for="name">Your Name:</label>  {# Label for the name input field. #}
+        <input type="text" id="name" name="name" required>  {# Input field for the user's name. #}
+
+        <label for="email">Your Email:</label>  {# Label for the email input field. #}
+        <input type="email" id="email" name="email" required>  {# Input field for the user's email. #}
+
+        <label for="message">Message:</label>  {# Label for the message textarea. #}
+        <textarea id="message" name="message" rows="4" required></textarea>  {# Textarea for the user's message. #}
+
+        <input type="submit" value="Submit">  {# Submit button to send the message. #}
+    </form>
+{% endblock %}  {# End of the content block. #}
