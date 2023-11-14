@@ -1,4 +1,3 @@
-# views.py
 from django.shortcuts import render
 from .models import Band
 from django.contrib.auth.forms import UserCreationForm
@@ -7,7 +6,8 @@ from django.shortcuts import render, redirect
 
 def home(request):
     """
-    View for the home page.
+    Renders the home page.
+
     Retrieves all bands from the database and passes them to the 'home.html' template.
     """
     bands = Band.objects.all()
@@ -15,22 +15,21 @@ def home(request):
 
 def about(request):
     """
-    View for the about page.
-    Renders the 'about.html' template.
+    Renders the about page.
     """
     return render(request, 'about.html')
 
 def contact(request):
     """
-    View for the contact page.
-    Renders the 'contact.html' template.
+    Renders the contact page.
     """
     return render(request, 'contact.html')
 
 def registration(request):
     """
-    View for user registration.
     Handles user registration using Django's UserCreationForm.
+
+    If the form is valid, registers the user and redirects to the home page.
     """
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
